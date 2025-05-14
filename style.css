@@ -1,0 +1,279 @@
+/* Custom CSS */
+
+/* Custom CSS */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    padding-top: 70px; /* Increased to accommodate the navbar height */
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 0; /* Consistent padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--light-color);
+}
+
+.navbar-nav {
+    gap: 1rem; /* Space between nav items */
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem !important; /* Better padding for clickable area */
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: var(--primary-color);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .nav-link::after {
+        display: none; /* Remove underline effect on mobile */
+    }
+
+    .nav-link.active {
+        border-bottom: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* Rest of your existing CSS remains unchanged */
+section {
+    padding: 80px 0;
+}
+
+.hero {
+    min-height: 100vh;
+    background-color: var(--light-color);
+    position: relative;
+}
+
+/* ... (rest of your existing CSS) ... */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    padding-top: 56px;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.hero {
+    min-height: 100vh;
+    background-color: var(--light-color);
+    position: relative;
+}
+
+.profile-img {
+    max-width: 350px;
+    border: 8px solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.section-title {
+    font-weight: 700;
+    position: relative;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.skill-icon {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .skill-icon {
+    transform: rotate(360deg);
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.hero-buttons .btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 0;
+    }
+
+    .hero {
+        text-align: center;
+        min-height: auto;
+    }
+
+    .profile-img {
+        max-width: 250px;
+        margin: 2rem auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
